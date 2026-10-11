@@ -1,0 +1,22 @@
+
+CREATE DATABASE IF NOT EXISTS kiambuhighform;
+
+USE kiambuhighform;
+
+CREATE TABLE IF NOT EXISTS students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT,
+    student_class VARCHAR(30),
+    admission_number VARCHAR(30) UNIQUE,
+    stream VARCHAR(30)
+);
+
+INSERT INTO students
+    (name, age, student_class, admission_number, stream)
+VALUES
+    ('Liam', 15, 'Form 2', 'ADM002', 'West'),
+    ('Mary', 16, 'Form 3', 'ADM003', 'East'),
+    ('John', 14, 'Form 1', 'ADM004', 'North');
+
+SELECT * FROM students;
